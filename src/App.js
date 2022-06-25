@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Stories from './Stories'
+import './App.css'
+import Search from './Search'
+import Pagination from './Pagination'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Search />
+      <Pagination />
+      <Stories />
+
+    </>
+    // http://hn.algolia.com/api/v1/search?query=...
+  )
 }
 
-export default App;
+export default App
